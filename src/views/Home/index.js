@@ -12,11 +12,6 @@ export default class Home extends Component {
         this.setState({
             count: ++this.state.count
         });
-        GLOBAL.commonAxios('/api/user', 'POST', {}, (res) => {
-            console.log(res);
-        }, (err) => {
-
-        });
     }
 
     render() {

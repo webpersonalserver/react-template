@@ -17,7 +17,7 @@ const devConfig = {
     },
     devServer: {
         host: 'localhost', // 指定的host
-        port: '8080', // 端口
+        port: '8088', // 端口
         contentBase: path.join(__dirname, './dist'), // URL的根目录
         historyApiFallback: true // 任意的404响应都被替代为index.html
     },

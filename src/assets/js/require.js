@@ -13,9 +13,9 @@ import axios from 'axios';
  */
 function commonAxios (url, method, data, successCallBack, failCallBack) {
   axios({
-    method: method || 'post',
-    url: url,
-    params: data
+    method: method || 'POST',
+    url: url || '',
+    params: data || {}
   }).then((res) => {
     successCallBack && successCallBack(res);
   }).catch((err) => {
