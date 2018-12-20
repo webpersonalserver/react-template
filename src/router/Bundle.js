@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Loading from 'components/Loading/index';
 
 class Bundle extends Component {
   state = {
@@ -33,4 +34,12 @@ class Bundle extends Component {
   }
 }
 
-export default Bundle;
+const asynComponent = (component) => (props) => (
+  <Bundle load={component}>
+    {
+      (Component) => Component ? <Component {...props} /> : <Loading />
+    }
+  </Bundle>
+);
+
+export default asynComponent;

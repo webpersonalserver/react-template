@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
 // 引用 normalize.css
 import 'normalize.css';
+// 程序页面路由主入口文件App
+import App from './App';
 // 全局引用自定义公共样式
 import 'assets/style/common.scss';
+// 全局引用自定义公共变量和方法
 import request from 'assets/js/require.js';
 import commonFun from 'assets/js/commonFun.js';
 import commonVar from 'assets/js/commonVar.js';
@@ -37,9 +38,7 @@ if (module.hot) {
 function renderWithHotReload(RootElement) {
   ReactDom.render(
     <AppContainer>
-      <Router>
-        <RootElement />
-      </Router>
+      <RootElement />
     </AppContainer>,
     document.getElementById('app')
   )
