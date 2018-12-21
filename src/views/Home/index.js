@@ -1,15 +1,20 @@
 import React from 'react';
-import { Lifecycle } from 'react-router-dom';
 import './index.scss';
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {};
+    }
+
+    handleClick = () => {
+        console.log('测试点击');
+        console.log(this);
     }
     render() {
         return (
             <div>
-                <h1>Home</h1>
+                <h1 onClick={this.handleClick}>Home</h1>
             </div>
         )
     }
