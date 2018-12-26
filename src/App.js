@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, browserHistory } from 'react-router-dom';
+import { BrowserRouter as Router, browserHistory, Switch } from 'react-router-dom';
 import routes from 'router/route';
 
 export default class App extends React.Component {
@@ -7,7 +7,9 @@ export default class App extends React.Component {
         return (
             <Router history={browserHistory}>
                 <div className="app-container">
-                    {routes()}
+                    <Switch>
+                        {routes}
+                    </Switch>
                 </div>
             </Router>
         )
